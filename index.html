@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>My_Simon_Says_Game</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://code.getmdl.io/1.1.3/material.indigo-pink.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <link href="https://fonts.googleapis.com/css?family=Freckle+Face" rel="stylesheet">
+<a href="https://en.wikipedia.org/wiki/Simon_Says?oldformat=true#Game_play"><h1>&nbsp;&nbsp;Simon Says Game</h1></a>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Akshay C A | 2017</p>
+<div id="game">
+  <div id="control">
+    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
+				<span class="or">Strict</span>
+				<input checked class="mdl-switch__input" id="switch-1" type="checkbox">
+			</label>
+    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-2">
+				<span class="or">Off / On</span>
+				<input checked class="mdl-switch__input" id="switch-2" type="checkbox">
+			</label>
+  </div>
+  <svg viewbox="0 0 720 720">
+		<defs>
+			<filter height="300%" id="f3" width="300%" x="0" y="0">
+				<feoffset dx="2" dy="2" in="SourceAlpha" result="offOut"></feoffset>
+				<fegaussianblur in="offOut" result="blurOut" stddeviation="1.5"></fegaussianblur>
+				<feblend in="SourceGraphic" in2="blurOut" mode="normal"></feblend>
+			</filter>
+		</defs>
+		<g>
+			<!-- <circle class="card-1" id='c1' cx="360" cy="360" r="340" filter="url(#f3)"/>-->
+			<path d='M4 360 A 356 356, 0, 1, 1, 360 716 L 4 716 Z' filter="url(#f3)" id='c1'></path>
+			<path d='M340 50 A 310 310, 0, 0, 0, 50 340 l 140 0 a 170 170, 0, 0, 1, 150 -150 Z' filter="url(#f3)" class='button' id='green'></path>
+			<path d='M380 50 A 310 310, 0, 0, 1, 670 340 l -140 0 a 170 170, 0, 0, 0, -150 -150 Z' filter="url(#f3)" class='button' id='red'></path>
+			<path d='M340 670 A 310 310, 0, 0, 1, 50 380 l 140 0 a 170 170, 0, 0, 0, 150 150 Z' filter="url(#f3)" class='button' id='blue'></path>
+			<path d='M380 670 A 310 310, 0, 0, 0, 670 380 l -140 0 a 170 170, 0, 0, 1, -150 150 Z' filter="url(#f3)" class='button' id='yellow'></path>
+			<path d='M220 360 A 1 1, 0, 1, 1, 500 360 Z' id='state'></path>
+			<path d='M220 360 A 1 1, 0, 1, 0, 500 360 Z' id='start' class='start'></path>
+			<text id='screen' fill="white" font-family="Freckle Face" font-size="75px" font-weight="800" text-anchor="middle" x="360" y="340">
+				Simon
+			</text>
+      <text id='win' fill="white" font-family="Freckle Face" font-size="55px" font-weight="800" text-anchor="middle" x="360" y="380" display='none'>
+				You Won!
+			</text>
+		</g>
+		<text class='start' fill="#263238" font-family="Freckle Face" font-size="55px" font-weight="800" text-anchor="middle" x="360" y="440">
+			Start
+		</text>
+    <circle id='c2' cx="360" cy="360" r="140" display='none'/>
+		</svg>
+</div>
+<audio id="greens" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></audio>
+<audio id="reds" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></audio>
+<audio id="yellows" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></audio>
+<audio id="blues" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></audio>
+
+<audio id="wrong" src="data:audio/wav;base64,UklGRuxKAAAA"></audio>
+  <script src='https://code.getmdl.io/1.1.3/material.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

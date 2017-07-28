@@ -1,0 +1,98 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto);
+body {
+    font-family: Freckle Face;
+    background: #09e5c0;
+    -moz-user-select: none;
+    /* Firefox */ 
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+a{
+  color:inherit;
+  text-decoration: none;
+  
+}
+a:hover {
+    text-decoration: underline;
+}
+h1
+{
+  font-family: 'Freckle Face', cursive;
+  text-shadow: 2px 2px #fff;
+}
+p
+{
+  font-family: 'Freckle Face', cursive;
+  text-shadow: 1px 1px #fff;
+}
+.or
+{
+  font-family: 'Freckle Face', cursive;
+}
+#game {
+    height: 95vw;
+    width: 95vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0px;
+}
+span {
+    font-size: 3vw;
+    display: inline-block;
+    margin-left: 3vw;
+}
+#control {
+    position: absolute;
+    height: 15%;
+    width: 50%;
+    bottom: 0;
+    left: 0;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end
+}
+#c2 {
+    fill: black
+}
+#c1 {
+    fill: white
+}
+#red {
+    fill: #f50057
+}
+#green {
+    fill: #00c853
+}
+#blue {
+    fill: #1565c0
+}
+#yellow {
+    fill: #ffa000
+}
+#state {
+    fill: #000;
+}
+#start {
+    fill: #bdbdbd
+}
+.start {
+    cursor: pointer;
+}
+#win {
+    fill: #004d40
+}
+@media only screen and (orientation: landscape) {
+    #game {
+        height: 90vh;
+        width: 90vh;
+    }
+    span {
+        font-size: 3vh;
+        margin-left: 2.5vh;
+    }
+}
